@@ -2,6 +2,7 @@ import type { KnipConfig } from "knip";
 
 const knipConfig: KnipConfig = {
   rules: {
+    binaries: "off",
     unlisted: "warn",
   },
   ignore: ["**/*config*"],
