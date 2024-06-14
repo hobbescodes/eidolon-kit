@@ -7,6 +7,7 @@
     "lint": "turbo lint",
     "format": "turbo format",
     "knip": "knip-bun",
+    "ui:add": "bun --filter @eidolonkit/ui ui:add",
     "prepare": "husky"
   },
   "devDependencies": {
