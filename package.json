@@ -16,6 +16,7 @@
     "@types/bun": "^1.1.4",
     "husky": "^9.0.11",
     "knip": "^5.19.0",
+    "lint-staged": "^15.2.7",
     "turbo": "^2.0.4-canary.4",
     "typescript": "^5.4.5"
   },
