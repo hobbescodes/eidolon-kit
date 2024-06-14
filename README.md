@@ -23,6 +23,7 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [Biome](https://biomejs.dev/) for code linting and formatting
 - [Knip](https://knip.dev/) for finding unused files, dependencies and exports
+- [Renovate](https://www.mend.io/renovate/) for keeping all dependencies up to date
 
 ### Build
 
