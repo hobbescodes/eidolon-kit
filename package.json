@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.1",
+    "knip": "^5.19.0",
     "turbo": "^2.0.4-canary.4",
     "typescript": "^5.4.5"
   },
