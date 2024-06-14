@@ -6,7 +6,8 @@
   "scripts": {
     "build": "forge build",
     "test": "forge test",
-    "lint": "forge fmt --check && bun solhint \"{script,src,test}/**/*.sol\""
+    "lint": "forge fmt --check && bun solhint \"{script,src,test}/**/*.sol\"",
+    "deps:install": "forge soldeer update"
   },
   "devDependencies": {
     "@eidolonkit/typescript-config": "*",
