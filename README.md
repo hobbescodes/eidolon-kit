@@ -1,5 +1,8 @@
 # Eidolon Kit 🔮
 
+> [!IMPORTANT]
+> ‼️ This is a work in progress. The current version of the kit is not ready for production use. ‼️
+
 ## What's inside?
 
 This Turborepo includes the following packages/apps:
