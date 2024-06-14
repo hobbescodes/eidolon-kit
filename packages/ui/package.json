@@ -8,7 +8,7 @@
     "./code": "./src/code.tsx"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "lint": "biome lint src",
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
@@ -19,7 +19,6 @@
     "@types/eslint": "^8.56.5",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
-    "eslint": "^8.57.0",
     "react": "^18.2.0",
     "typescript": "^5.3.3"
   }
