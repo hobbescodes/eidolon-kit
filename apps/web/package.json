@@ -6,7 +6,8 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "biome lint app"
+    "lint": "biome lint app",
+    "format": "biome format --write app"
   },
   "dependencies": {
     "@eidolonkit/ui": "*",
