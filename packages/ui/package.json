@@ -2,22 +2,33 @@
   "name": "@eidolonkit/ui",
   "version": "0.0.0",
   "private": true,
-  "exports": {
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
-  },
   "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
     "lint": "biome lint src",
     "format": "biome format --write src",
-    "generate:component": "turbo gen react-component"
+    "ui:add": "bun run ./src/scripts/add-component.ts"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/ui.d.mts",
+      "import": "./dist/ui.mjs"
+    }
+  },
+  "dependencies": {
+    "@ark-ui/react": "^3.3.0",
+    "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
+    "@eidolonkit/tailwind": "*",
     "@eidolonkit/typescript-config": "*",
-    "@turbo/gen": "^2.0.0",
+    "@microsoft/api-extractor": "^7.47.0",
     "@types/node": "^20.11.24",
-    "@types/react": "^18.2.61",
-    "react": "^18.2.0",
+    "@types/react": "^18.3.3",
+    "postcss": "^8.4.38",
+    "react": "^18.3.1",
+    "tailwindcss": "^3.4.4",
+    "tsup": "^8.1.0",
     "typescript": "^5.3.3"
   }
 }
