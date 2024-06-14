@@ -23,7 +23,7 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [Biome](https://biomejs.dev/) for code linting and formatting
 - [Knip](https://knip.dev/) for finding unused files, dependencies and exports
-- [Husky](https://typicode.github.io/husky/) and [Commitlint](https://commitlint.js.org/) for commit linting
+- [Husky](https://typicode.github.io/husky/), [Commitlint](https://commitlint.js.org/), and [Lint-Staged](https://github.com/okonet/lint-staged) for commit message and staged file linting
 - [Renovate](https://www.mend.io/renovate/) for keeping all dependencies up to date
 
 ### Build
