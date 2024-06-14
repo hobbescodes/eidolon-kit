@@ -4,13 +4,19 @@
   "private": true,
   "scripts": {
     "lint": "biome lint src",
-    "format": "biome format --write src"
+    "format": "biome format --write src",
+    "ui:add": "bun run ./src/scripts/add-component.ts"
+  },
+  "dependencies": {
+    "@ark-ui/react": "^3.3.0",
+    "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
     "@eidolonkit/tailwind": "*",
     "@eidolonkit/typescript-config": "*",
     "@types/node": "^20.11.24",
     "postcss": "^8.4.38",
+    "react": "^18.3.1",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.3.3"
   }

@@ -2,7 +2,12 @@
   "extends": "@eidolonkit/typescript-config/react-library.json",
   "compilerOptions": {
     "tsBuildInfoFile": ".tsbuildinfo",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
     "src",

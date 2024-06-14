@@ -2,21 +2,20 @@ import type { KnipConfig } from "knip";
 
 const knipConfig: KnipConfig = {
   rules: {
-    unlisted: "warn"
+    unlisted: "warn",
   },
-  ignore: [
-    "**/*config*"
-  ],
-  // TODO: remove when UI package is revamped and ready
-  ignoreDependencies: [
-    "postcss"
-  ],
+  ignore: ["**/*config*"],
+  ignoreDependencies: ["postcss"],
   workspaces: {
     "packages/ui": {
-      // TODO: remove when UI package is revamped and ready
-      ignoreDependencies: ["@turbo/gen"]
-    }
-  }
-}
+      ignore: [
+        "src/scripts/add-component.ts",
+        // TODO: remove when more components are added that depend on create style context
+        "src/lib/create-style-context.tsx",
+      ],
+      entry: ["**/index.ts", "**/index.tsx"],
+    },
+  },
+};
 
 export default knipConfig;
