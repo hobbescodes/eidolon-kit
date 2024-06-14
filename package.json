@@ -20,6 +20,12 @@
     "turbo": "^2.0.4-canary.4",
     "typescript": "^5.4.5"
   },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "biome format --write",
+      "biome lint"
+    ]
+  },
   "packageManager": "bun@1.1.13",
   "workspaces": [
     "apps/*",
