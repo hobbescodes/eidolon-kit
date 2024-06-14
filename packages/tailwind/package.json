@@ -1,0 +1,18 @@
+{
+  "name": "@eidolonkit/tailwind",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/preset.ts"
+  },
+  "dependencies": {
+    "@park-ui/tailwind-plugin": "^0.20.1",
+    "tailwindcss": "^3.4.4"
+  },
+  "devDependencies": {
+    "@eidolonkit/typescript-config": "*",
+    "@types/bun": "^1.1.3",
+    "typescript": "^5.3.3"
+  }
+}
