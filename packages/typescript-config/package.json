@@ -5,8 +5,5 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "@types/bun": "^1.1.4"
   }
 }
