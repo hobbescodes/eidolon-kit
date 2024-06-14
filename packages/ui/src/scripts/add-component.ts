@@ -59,8 +59,8 @@ const main = async () => {
     console.log(`Component: ${component} added to index file`);
 
     // NB: rebuild the package
-    // await $`bun run build`;
-    // console.log(`Component: ${component} added to dist folder`);
+    await $`bun run build`;
+    console.log(`Component: ${component} added to dist folder`);
   } catch (e) {
     console.error(e);
     process.exit(1);
