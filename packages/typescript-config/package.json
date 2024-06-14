@@ -1,9 +1,12 @@
 {
-  "name": "@repo/typescript-config",
+  "name": "@eidolonkit/typescript-config",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.4"
   }
 }
