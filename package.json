@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.1",
+    "@types/bun": "^1.1.4",
+    "knip": "^5.19.0",
     "turbo": "^2.0.4-canary.4",
     "typescript": "^5.4.5"
   },
@@ -17,9 +19,7 @@
     "apps/*",
     "packages/*"
   ],
-  "dependencies": {
-    "next": "^14.2.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  }
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
 }
