@@ -3,7 +3,7 @@ import { preset } from "@eidolonkit/tailwind";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./src/**/*.{ts,tsx,mdx}"],
   darkMode: "class",
   presets: [preset],
 };
