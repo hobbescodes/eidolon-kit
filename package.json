@@ -5,11 +5,16 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "turbo format"
+    "format": "turbo format",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.1",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/types": "^19.0.3",
     "@types/bun": "^1.1.4",
+    "husky": "^9.0.11",
     "knip": "^5.19.0",
     "turbo": "^2.0.4-canary.4",
     "typescript": "^5.4.5"
