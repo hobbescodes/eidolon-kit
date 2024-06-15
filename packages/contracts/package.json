@@ -6,8 +6,12 @@
   "scripts": {
     "build": "forge build",
     "deps:install": "forge soldeer update",
+    "deploy": "bun run ./bun-scripts/local.ts",
     "lint": "forge fmt --check && bun solhint \"{script,src,test}/**/*.sol\"",
     "test": "forge test"
+  },
+  "dependencies": {
+    "@eidolonkit/env": "*"
   },
   "devDependencies": {
     "@eidolonkit/typescript-config": "*",

@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "contracts:deploy": "bun --filter @eidolonkit/contracts deploy",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "turbo format",
