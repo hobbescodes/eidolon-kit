@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "build": "forge build",
-    "deps:install": "forge soldeer update",
+    "soldeer": "forge soldeer update",
     "lint": "forge fmt --check && bun solhint \"{script,src,test}/**/*.sol\"",
-    "local:deploy": "bun run ./bun-scripts/local.ts",
+    "deploy": "bun run ./bun-scripts/local.ts",
     "test": "forge test"
   },
   "dependencies": {

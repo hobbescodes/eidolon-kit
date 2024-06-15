@@ -30,6 +30,12 @@ This Turborepo has some additional tools already setup for you:
 - [Husky](https://typicode.github.io/husky/), [Commitlint](https://commitlint.js.org/), and [Lint-Staged](https://github.com/okonet/lint-staged) for commit message and staged file linting
 - [Renovate](https://www.mend.io/renovate/) for keeping all dependencies up to date
 
+> [!NOTE]
+> Prior to running any of the commands below, it is recommended to run `bun contracts:install` to install the appropriate dependencies for the contracts package.
+
+> [!TIP]
+> With the current configuration, you will have to have an encrypted private key (even for local development with anvil) using the generated JSON keystores from `cast wallet import --interactive`. More details can be found [here](https://github.com/foundry-rs/foundry/pull/5551).
+
 ### Build
 
 To build all apps and packages, run the following command:
@@ -53,9 +59,6 @@ anvil
 ```
 bun contracts:deploy
 ```
-
-> [!TIP]
-> With the current configuration, you will have to have an encrypted private key (even for local development with anvil) using the generated JSON keystores from `cast wallet import --interactive`. More details can be found [here](https://github.com/foundry-rs/foundry/pull/5551).
 
 followed by:
 
