@@ -54,13 +54,15 @@ To develop all apps and packages, do the following:
 anvil
 ```
 
-2. In another terminal window, run:
+2a. In another terminal window, run:
 
 ```
 bun contracts:deploy
 ```
 
-followed by:
+2b. Update `packages/contracts/wagmi.config.ts` to use appropriate deployment address for local anvil chain if necessary (address can be found in `packages/contracts/broadcast/Deploy.s.sol/31337/run-latest.json`).
+
+3. Spin up remaining development servers:
 
 ```
 bun dev

@@ -7,11 +7,16 @@
     "build": "forge build",
     "soldeer": "forge soldeer update",
     "lint": "forge fmt --check && bun solhint \"{script,src,test}/**/*.sol\"",
-    "deploy": "bun run ./bun-scripts/local.ts",
-    "test": "forge test"
+    "deploy": "bun run ./bun-scripts/deploy.ts",
+    "test": "forge test",
+    "wagmi:generate": "wagmi generate"
+  },
+  "exports": {
+    "./wagmi": "./generated/index.ts"
   },
   "dependencies": {
-    "@eidolonkit/env": "*"
+    "@eidolonkit/env": "*",
+    "@wagmi/cli": "^2.1.10"
   },
   "devDependencies": {
     "@eidolonkit/typescript-config": "*",
