@@ -40,7 +40,24 @@ bun run build
 
 ### Develop
 
-To develop all apps and packages, run the following command:
+To develop all apps and packages, do the following:
+
+1. In one terminal window, run:
+
+```
+anvil
+```
+
+2. In another terminal window, run:
+
+```
+bun contracts:deploy
+```
+
+> [!TIP]
+> With the current configuration, you will have to have an encrypted private key (even for local development with anvil) using the generated JSON keystores from `cast wallet import --interactive`. More details can be found [here](https://github.com/foundry-rs/foundry/pull/5551).
+
+followed by:
 
 ```
 bun dev
