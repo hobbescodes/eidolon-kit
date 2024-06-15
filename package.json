@@ -1,12 +1,12 @@
 {
-  "name": "eidolon",
+  "name": "eidolonkit",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "turbo format",
-    "knip": "knip-bun",
+    "knip": "knip-bun --tags=-knipignore",
     "prepare": "husky",
     "test": "turbo test",
     "contracts:install": "bun --filter @eidolonkit/contracts soldeer",
