@@ -1,0 +1,16 @@
+[profile.default]
+src = "src"
+out = "out"
+
+[fmt]
+bracket_spacing = true
+int_types = "long"
+line_length = 120
+multiline_func_header = "all"
+number_underscore = "thousands"
+quote_style = "double"
+tab_width = 4
+wrap_comments = true
+
+[dependencies]
+forge-std = { version = "1.8.2" }

@@ -1,0 +1,16 @@
+{
+  "name": "@eidolonkit/contracts",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "forge build",
+    "deps:install": "forge soldeer update",
+    "lint": "forge fmt --check && bun solhint \"{script,src,test}/**/*.sol\"",
+    "test": "forge test"
+  },
+  "devDependencies": {
+    "@eidolonkit/typescript-config": "*",
+    "solhint": "^5.0.1"
+  }
+}

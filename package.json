@@ -7,8 +7,9 @@
     "lint": "turbo lint",
     "format": "turbo format",
     "knip": "knip-bun",
-    "ui:add": "bun --filter @eidolonkit/ui ui:add",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "turbo test",
+    "ui:add": "bun --filter @eidolonkit/ui ui:add"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.1",
