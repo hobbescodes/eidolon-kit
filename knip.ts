@@ -8,6 +8,9 @@ const knipConfig: KnipConfig = {
   ignore: ["**/*config*"],
   ignoreDependencies: ["postcss"],
   workspaces: {
+    "packages/contracts": {
+      entry: ["**/*.ts"],
+    },
     "packages/ui": {
       ignore: [
         "src/scripts/add-component.ts",

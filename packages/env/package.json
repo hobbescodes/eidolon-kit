@@ -1,0 +1,21 @@
+{
+  "name": "@eidolonkit/env",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "biome lint src",
+    "format": "biome format --write src"
+  },
+  "exports": {
+    "./blockchain": "./src/blockchain.ts"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.10.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eidolonkit/typescript-config": "*"
+  }
+}
