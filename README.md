@@ -23,6 +23,7 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [Foundry](https://book.getfoundry.sh/) for smart contract development
 - [Soldeer](https://soldeer.xyz/) for package management for Foundry projects
+- [Ponder](https://ponder.sh/) for rapid API development on top of any EVM smart contract
 - [Tailwind](https://tailwindcss.com/) for styling
 - [Park UI](https://park-ui.com/) for scaffolding the ui component library package
 - [Biome](https://biomejs.dev/) for code linting and formatting
