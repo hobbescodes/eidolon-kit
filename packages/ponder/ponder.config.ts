@@ -1,21 +1,21 @@
 import { createConfig } from "@ponder/core";
-import { http, zeroAddress } from "viem";
+import { http } from "viem";
 
-import { ExampleContractAbi } from "./abis/ExampleContractAbi";
+import { counterAbi, counterAddress } from "@eidolonkit/contracts/wagmi";
+import { env } from "@eidolonkit/env/blockchain";
 
 export default createConfig({
   networks: {
-    mainnet: {
-      chainId: 1,
-      transport: http(process.env.PONDER_RPC_URL_1),
+    localhost: {
+      chainId: 31337,
+      transport: http(env.RPC_URL),
     },
   },
   contracts: {
-    ExampleContract: {
-      network: "mainnet",
-      abi: ExampleContractAbi,
-      address: zeroAddress,
-      startBlock: 1234567,
+    Counter: {
+      network: "localhost",
+      abi: counterAbi,
+      address: counterAddress[31337],
     },
   },
 });

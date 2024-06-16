@@ -4,12 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "ponder dev",
+    "dev": "bun --env-file .env.local ponder dev",
     "start": "ponder start",
-    "codegen": "ponder codegen",
+    "codegen": "bun --env-file .env.local ponder codegen",
     "lint": "eslint --ext .ts"
   },
   "dependencies": {
+    "@eidolonkit/contracts": "*",
+    "@eidolonkit/env": "*",
     "@ponder/core": "^0.4.37",
     "viem": "^2.14.1"
   },
@@ -18,6 +20,12 @@
     "@types/node": "^20.9.0",
     "eslint": "^8.53.0",
     "eslint-config-ponder": "^0.4.37",
-    "typescript": "^5.2.2"
+    "typescript": "^5.4.5"
+  },
+  "trustedDependencies": [
+    "better-sqlite3"
+  ],
+  "engines": {
+    "node": ">=18"
   }
 }
