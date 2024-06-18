@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
+    "dev": "turbo run dev docs:dev",
     "lint": "turbo lint",
     "format": "turbo format",
     "knip": "knip-bun --tags=-knipignore",

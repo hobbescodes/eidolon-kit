@@ -7,13 +7,17 @@
     "dev": "bun --env-file .env.local ponder dev",
     "start": "ponder start",
     "codegen": "bun --env-file .env.local ponder codegen",
-    "lint": "eslint --ext .ts"
+    "lint": "eslint --ext .ts",
+    "docs:dev": "vocs dev --port 3002",
+    "docs:build": "vocs build",
+    "docs:preview": "vocs preview"
   },
   "dependencies": {
     "@eidolonkit/contracts": "*",
     "@eidolonkit/env": "*",
     "@ponder/core": "^0.4.37",
-    "viem": "^2.14.1"
+    "viem": "^2.14.1",
+    "vocs": "^1.0.0-alpha.52"
   },
   "devDependencies": {
     "@eidolonkit/typescript-config": "*",
