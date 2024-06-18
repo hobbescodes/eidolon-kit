@@ -4,7 +4,7 @@ import { z } from "zod";
 export const env = createEnv({
   server: {
     NODE_ENV: z.enum(["development", "production", "test"]).optional(),
-    RPC_URL: z.string().default("http://localhost:8545"),
+    RPC_URL: z.string().default("http://127.0.0.1:8545"),
     KEYSTORE_ACCOUNT: z.string().optional(),
   },
   runtimeEnv: process.env,

@@ -52,7 +52,7 @@ To develop all apps and packages, do the following:
 1. In one terminal window, run:
 
 ```
-anvil
+bun contracts:anvil
 ```
 
 2a. In another terminal window, run:

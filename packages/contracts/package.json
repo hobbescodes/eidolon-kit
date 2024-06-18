@@ -12,7 +12,8 @@
     "wagmi:generate": "wagmi generate"
   },
   "exports": {
-    "./wagmi": "./generated/index.ts"
+    "./wagmi": "./generated/index.ts",
+    "./anvil": "./broadcast/Deploy.s.sol/31337/run-latest.json"
   },
   "dependencies": {
     "@eidolonkit/env": "*",

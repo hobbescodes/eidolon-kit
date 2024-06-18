@@ -9,6 +9,7 @@
     "knip": "knip-bun --tags=-knipignore",
     "prepare": "husky",
     "test": "turbo test",
+    "contracts:anvil": "anvil --block-time 2",
     "contracts:install": "bun --filter @eidolonkit/contracts soldeer",
     "contracts:deploy": "bun --filter @eidolonkit/contracts deploy",
     "ui:add": "bun --filter @eidolonkit/ui ui:add"

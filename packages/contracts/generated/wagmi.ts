@@ -2,9 +2,6 @@
 // Counter
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/**
- *
- */
 export const counterAbi = [
   {
     type: "function",
@@ -41,18 +38,3 @@ export const counterAbi = [
     name: "NumberUpdated",
   },
 ] as const;
-
-/**
- *
- */
-export const counterAddress = {
-  31337: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-} as const;
-
-/**
- *
- */
-export const counterConfig = {
-  address: counterAddress,
-  abi: counterAbi,
-} as const;
