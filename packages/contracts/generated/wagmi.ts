@@ -24,17 +24,4 @@ export const counterAbi = [
     outputs: [],
     stateMutability: "nonpayable",
   },
-  {
-    type: "event",
-    anonymous: false,
-    inputs: [
-      {
-        name: "updatedNumber",
-        internalType: "uint256",
-        type: "uint256",
-        indexed: false,
-      },
-    ],
-    name: "NumberUpdated",
-  },
 ] as const;

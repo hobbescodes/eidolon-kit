@@ -24,6 +24,7 @@ export default createConfig({
       abi: counterAbi,
       address,
       startBlock,
+      includeCallTraces: true,
     },
   },
 });
