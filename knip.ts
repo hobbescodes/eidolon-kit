@@ -11,7 +11,7 @@ const knipConfig: KnipConfig = {
     "packages/contracts": {
       entry: ["**/*.ts"],
     },
-    "packages/ponder": {
+    "apps/ponder": {
       entry: ["src/**/*.ts"],
       ignore: ["ponder.schema.ts"],
     },
