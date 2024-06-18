@@ -9,12 +9,11 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
 - `@eidolonkit/contracts`: a [Foundry](https://book.getfoundry.sh/) project for smart contract development
 - `@eidolonkit/tailwind`: a [Tailwind](https://tailwindcss.com/) preset
 - `@eidolonkit/typescript-config`: `tsconfig.json`s used throughout the monorepo
-- `@eidolonkit/ui`: a component library shared by both `web` and `docs` applications
+- `@eidolonkit/ui`: a component library for use in react based applications
 
 ### Utilities
 
@@ -23,6 +22,7 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [Foundry](https://book.getfoundry.sh/) for smart contract development
 - [Soldeer](https://soldeer.xyz/) for package management for Foundry projects
+- [Vocs](https://vocs.dev/) for documentation site generation
 - [Ponder](https://ponder.sh/) for rapid API development on top of any EVM smart contract
 - [Tailwind](https://tailwindcss.com/) for styling
 - [Park UI](https://park-ui.com/) for scaffolding the ui component library package
