@@ -32,7 +32,11 @@ This Turborepo has some additional tools already setup for you:
 - [Renovate](https://www.mend.io/renovate/) for keeping all dependencies up to date
 
 > [!NOTE]
-> Prior to running any of the commands below, it is recommended to run `bun contracts:install` to install the appropriate dependencies for the contracts package.
+> Prior to running any of the commands below, it is required to install all necessary dependencies:
+
+```
+bun install && bun contracts:install
+```
 
 > [!TIP]
 > With the current configuration, you will have to have an encrypted private key (even for local development with anvil) using the generated JSON keystores from `cast wallet import --interactive`. More details can be found [here](https://github.com/foundry-rs/foundry/pull/5551).
