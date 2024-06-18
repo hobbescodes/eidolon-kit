@@ -61,7 +61,7 @@ bun contracts:anvil
 bun contracts:deploy
 ```
 
-3. Spin up remaining development servers:
+3. Spin up remaining development servers (with default configuration this includes servers spun up with `docs:dev`):
 
 ```
 bun dev
