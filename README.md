@@ -23,12 +23,19 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [Foundry](https://book.getfoundry.sh/) for smart contract development
 - [Soldeer](https://soldeer.xyz/) for package management for Foundry projects
+- [Ponder](https://ponder.sh/) for rapid API development on top of any EVM smart contract
 - [Tailwind](https://tailwindcss.com/) for styling
 - [Park UI](https://park-ui.com/) for scaffolding the ui component library package
 - [Biome](https://biomejs.dev/) for code linting and formatting
 - [Knip](https://knip.dev/) for finding unused files, dependencies and exports
 - [Husky](https://typicode.github.io/husky/), [Commitlint](https://commitlint.js.org/), and [Lint-Staged](https://github.com/okonet/lint-staged) for commit message and staged file linting
 - [Renovate](https://www.mend.io/renovate/) for keeping all dependencies up to date
+
+> [!NOTE]
+> Prior to running any of the commands below, it is recommended to run `bun contracts:install` to install the appropriate dependencies for the contracts package.
+
+> [!TIP]
+> With the current configuration, you will have to have an encrypted private key (even for local development with anvil) using the generated JSON keystores from `cast wallet import --interactive`. More details can be found [here](https://github.com/foundry-rs/foundry/pull/5551).
 
 ### Build
 
@@ -45,19 +52,18 @@ To develop all apps and packages, do the following:
 1. In one terminal window, run:
 
 ```
-anvil
+bun contracts:anvil
 ```
 
-2. In another terminal window, run:
+2a. In another terminal window, run:
 
 ```
 bun contracts:deploy
 ```
 
-> [!TIP]
-> With the current configuration, you will have to have an encrypted private key (even for local development with anvil) using the generated JSON keystores from `cast wallet import --interactive`. More details can be found [here](https://github.com/foundry-rs/foundry/pull/5551).
+2b. Update `packages/contracts/wagmi.config.ts` to use appropriate deployment address for local anvil chain if necessary (address can be found in `packages/contracts/broadcast/Deploy.s.sol/31337/run-latest.json`).
 
-followed by:
+3. Spin up remaining development servers:
 
 ```
 bun dev

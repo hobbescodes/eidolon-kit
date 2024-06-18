@@ -3,7 +3,7 @@ import { $ } from "bun";
 import { env } from "@eidolonkit/env/blockchain";
 
 const main = async () => {
-  await $`forge create ./src/Counter.sol:Counter --rpc-url http://localhost:8545 --account ${env.KEYSTORE_ACCOUNT}`;
+  await $`forge script script/Deploy.s.sol:DeployScript --rpc-url ${env.RPC_URL} --account ${env.KEYSTORE_ACCOUNT} --broadcast`;
 };
 
 main()

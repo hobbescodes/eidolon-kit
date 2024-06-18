@@ -1,15 +1,17 @@
 {
-  "name": "eidolon",
+  "name": "eidolonkit",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "local:deploy": "bun --filter @eidolonkit/contracts local:deploy",
     "format": "turbo format",
-    "knip": "knip-bun",
+    "knip": "knip-bun --tags=-knipignore",
     "prepare": "husky",
     "test": "turbo test",
+    "contracts:anvil": "anvil --block-time 2",
+    "contracts:install": "bun --filter @eidolonkit/contracts soldeer",
+    "contracts:deploy": "bun --filter @eidolonkit/contracts deploy",
     "ui:add": "bun --filter @eidolonkit/ui ui:add"
   },
   "devDependencies": {

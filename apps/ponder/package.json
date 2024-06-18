@@ -1,0 +1,31 @@
+{
+  "name": "ponder",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --env-file .env.local ponder dev",
+    "start": "ponder start",
+    "codegen": "bun --env-file .env.local ponder codegen",
+    "lint": "eslint --ext .ts"
+  },
+  "dependencies": {
+    "@eidolonkit/contracts": "*",
+    "@eidolonkit/env": "*",
+    "@ponder/core": "^0.4.37",
+    "viem": "^2.14.1"
+  },
+  "devDependencies": {
+    "@eidolonkit/typescript-config": "*",
+    "@types/node": "^20.9.0",
+    "eslint": "^8.53.0",
+    "eslint-config-ponder": "^0.4.37",
+    "typescript": "^5.4.5"
+  },
+  "trustedDependencies": [
+    "better-sqlite3"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
