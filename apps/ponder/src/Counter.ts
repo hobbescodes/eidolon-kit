@@ -32,10 +32,8 @@ ponder.on("Counter.increment()", async ({ context }) => {
     create: {
       value: 1n,
     },
-    update: ({ current }) => {
-      return {
-        value: current.value + 1n,
-      };
-    },
+    update: ({ current }) => ({
+      value: current.value + 1n,
+    }),
   });
 });
