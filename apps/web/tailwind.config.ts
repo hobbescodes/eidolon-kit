@@ -14,6 +14,13 @@ const config: Config = {
     accentColor: "mint",
     grayColor: "sage",
   },
+  theme: {
+    extend: {
+      gridTemplateRows: {
+        layout: "auto 1fr auto",
+      },
+    },
+  },
 };
 
 export default config;

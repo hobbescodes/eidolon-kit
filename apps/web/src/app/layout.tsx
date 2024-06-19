@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 
+import { Layout } from "components/layout";
 import {
   QueryClientProvider,
   RainbowKitProvider,
@@ -36,7 +37,9 @@ const RootLayout = ({ children }: Readonly<Props>) => {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <WagmiProvider>
           <QueryClientProvider>
-            <RainbowKitProvider>{children}</RainbowKitProvider>
+            <RainbowKitProvider>
+              <Layout>{children}</Layout>
+            </RainbowKitProvider>
           </QueryClientProvider>
         </WagmiProvider>
       </body>
