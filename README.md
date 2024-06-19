@@ -56,7 +56,7 @@ To develop all apps and packages, do the following:
 1. In one terminal window, run:
 
 ```
-bun contracts:anvil
+bun anvil
 ```
 
 2. In another terminal window, run:
