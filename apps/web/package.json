@@ -15,14 +15,18 @@
   },
   "dependencies": {
     "@eidolonkit/ui": "*",
+    "@tanstack/react-query": "^5.45.1",
     "next": "^14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "vocs": "^1.0.0-alpha.52"
+    "viem": "^2.15.1",
+    "vocs": "^1.0.0-alpha.52",
+    "wagmi": "^2.10.2"
   },
   "devDependencies": {
     "@eidolonkit/tailwind": "*",
     "@eidolonkit/typescript-config": "*",
+    "@tanstack/react-query-devtools": "^5.45.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

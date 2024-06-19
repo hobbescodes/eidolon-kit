@@ -1,11 +1,7 @@
 {
   "extends": "@eidolonkit/typescript-config/nextjs.json",
   "compilerOptions": {
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "baseUrl": "src"
   },
   "include": [
     "next-env.d.ts",

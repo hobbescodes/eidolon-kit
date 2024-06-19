@@ -3,7 +3,6 @@
   "display": "Next.js",
   "extends": "./base.json",
   "compilerOptions": {
-    "baseUrl": "src",
     "lib": [
       "dom",
       "dom.iterable",
