@@ -22,6 +22,7 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [Foundry](https://book.getfoundry.sh/) for smart contract development
 - [Soldeer](https://soldeer.xyz/) for package management for Foundry projects
+- [Wagmi](https://wagmi.sh/) for connection to Ethereum through a collection of type safe react hooks
 - [Vocs](https://vocs.dev/) for documentation site generation
 - [Ponder](https://ponder.sh/) for rapid API development on top of any EVM smart contract
 - [Tailwind](https://tailwindcss.com/) for styling
