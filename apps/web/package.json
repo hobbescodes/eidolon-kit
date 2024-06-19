@@ -26,6 +26,7 @@
   "devDependencies": {
     "@eidolonkit/tailwind": "*",
     "@eidolonkit/typescript-config": "*",
+    "@tanstack/react-query-devtools": "^5.45.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
