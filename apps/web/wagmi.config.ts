@@ -1,15 +1,16 @@
-import { http, cookieStorage, createConfig, createStorage } from "wagmi";
+import { getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { http } from "wagmi";
 import { anvil } from "wagmi/chains";
 
-const wagmiConfig = createConfig({
+import { env } from "@eidolonkit/env/web";
+
+const wagmiConfig = getDefaultConfig({
+  appName: "EidolonKit",
+  projectId: env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID,
   chains: [anvil],
   ssr: true,
-  storage: createStorage({
-    storage: cookieStorage,
-  }),
   transports: {
-    // TODO: add t3 env config for web app and use it here
-    [anvil.id]: http("http://127.0.0.1:8545"),
+    [anvil.id]: http(),
   },
 });
 

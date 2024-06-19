@@ -1,13 +1,15 @@
 import localFont from "next/font/local";
-import { headers } from "next/headers";
-import { cookieToInitialState } from "wagmi";
 
-import { QueryClientProvider, WagmiProvider } from "providers";
-import wagmiConfig from "../../wagmi.config";
+import {
+  QueryClientProvider,
+  RainbowKitProvider,
+  WagmiProvider,
+} from "providers";
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
+import "@rainbow-me/rainbowkit/styles.css";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -29,16 +31,13 @@ interface Props {
 }
 
 const RootLayout = ({ children }: Readonly<Props>) => {
-  const initialState = cookieToInitialState(
-    wagmiConfig,
-    headers().get("cookie"),
-  );
-
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <WagmiProvider initialState={initialState}>
-          <QueryClientProvider>{children}</QueryClientProvider>
+        <WagmiProvider>
+          <QueryClientProvider>
+            <RainbowKitProvider>{children}</RainbowKitProvider>
+          </QueryClientProvider>
         </WagmiProvider>
       </body>
     </html>
