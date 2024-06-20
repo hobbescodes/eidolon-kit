@@ -10,7 +10,9 @@ import { Button } from "@eidolonkit/ui";
 import { useCurrentNumber } from "lib/hooks";
 import { cn } from "lib/utils";
 
-const Increment = () => {
+import type { ButtonProps } from "@eidolonkit/ui";
+
+const Increment = ({ className, ...rest }: ButtonProps) => {
   const { refetch } = useCurrentNumber();
 
   const { data: incrementTxHash, writeContract } = useWriteContract();
@@ -39,7 +41,8 @@ const Increment = () => {
     <Button
       onClick={increment}
       disabled={isLoading}
-      className={cn(isLoading && "animate-pulse")}
+      className={cn(className, isLoading && "animate-pulse")}
+      {...rest}
     >
       Increment
     </Button>
