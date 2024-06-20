@@ -1,6 +1,10 @@
 "use client";
 
-import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
+import {
+  RainbowKitProvider,
+  getDefaultConfig,
+  lightTheme,
+} from "@rainbow-me/rainbowkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { anvil } from "viem/chains";
@@ -30,7 +34,14 @@ const Providers = ({ children }: Props) => (
   // @ts-ignore
   <WagmiProvider config={rainbowConfig}>
     <QueryClientProvider client={queryClient}>
-      <RainbowKitProvider>{children}</RainbowKitProvider>
+      <RainbowKitProvider
+        theme={lightTheme({
+          accentColor: "var(--colors-accent-default)",
+          accentColorForeground: "var(--colors-accent-fg)",
+        })}
+      >
+        {children}
+      </RainbowKitProvider>
       {/* NB: by default, RQ dev tools are only included in `NODE_ENV=development` environments */}
       <ReactQueryDevtools />
     </QueryClientProvider>
