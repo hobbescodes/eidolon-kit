@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "biome lint src",
     "format": "biome format --write src",
+    "graphql:generate": "bun run --env-file .env.local graphql-codegen",
     "docs:dev": "vocs dev --port 3001",
     "docs:build": "vocs build",
     "docs:preview": "vocs preview"
@@ -20,6 +21,9 @@
     "@rainbow-me/rainbowkit": "^2.1.2",
     "@tanstack/react-query": "^5.45.1",
     "clsx": "^2.1.1",
+    "gql.tada": "^1.7.6",
+    "graphql": "^16.8.2",
+    "graphql-request": "^7.0.1",
     "next": "^14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -29,8 +33,11 @@
     "wagmi": "^2.10.3"
   },
   "devDependencies": {
+    "@0no-co/graphqlsp": "^1.12.8",
     "@eidolonkit/tailwind": "*",
     "@eidolonkit/typescript-config": "*",
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/schema-ast": "^4.0.2",
     "@tanstack/react-query-devtools": "^5.45.1",
     "@types/node": "^20",
     "@types/react": "^18",

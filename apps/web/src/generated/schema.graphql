@@ -1,0 +1,46 @@
+scalar BigInt
+
+type Counter {
+  id: String!
+  value: BigInt!
+}
+
+input CounterFilter {
+  AND: [CounterFilter]
+  OR: [CounterFilter]
+  id: String
+  id_contains: String
+  id_ends_with: String
+  id_in: [String]
+  id_not: String
+  id_not_contains: String
+  id_not_ends_with: String
+  id_not_in: [String]
+  id_not_starts_with: String
+  id_starts_with: String
+  value: BigInt
+  value_gt: BigInt
+  value_gte: BigInt
+  value_in: [BigInt]
+  value_lt: BigInt
+  value_lte: BigInt
+  value_not: BigInt
+  value_not_in: [BigInt]
+}
+
+type CounterPage {
+  items: [Counter!]!
+  pageInfo: PageInfo!
+}
+
+type PageInfo {
+  endCursor: String
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+}
+
+type Query {
+  counter(id: String!): Counter
+  counters(after: String, before: String, limit: Int, orderBy: String, orderDirection: String, where: CounterFilter): CounterPage!
+}

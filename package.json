@@ -7,7 +7,7 @@
     "dev": "turbo run dev docs:dev",
     "lint": "turbo lint",
     "format": "turbo format",
-    "knip": "knip-bun --tags=-knipignore",
+    "knip": "bun run --env-file ./apps/web/.env.local knip-bun --tags=-knipignore",
     "prepare": "husky",
     "test": "turbo test",
     "contracts:install": "bun --filter @eidolonkit/contracts soldeer",
