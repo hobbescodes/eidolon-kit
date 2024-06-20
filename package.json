@@ -38,6 +38,7 @@
     "packages/*"
   ],
   "trustedDependencies": [
-    "@biomejs/biome"
+    "@biomejs/biome",
+    "esbuild"
   ]
 }
