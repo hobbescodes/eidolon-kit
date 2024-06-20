@@ -1,7 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-import { useWaitForTransactionReceipt, useWriteContract } from "wagmi";
+import {
+  useAccount,
+  useWaitForTransactionReceipt,
+  useWriteContract,
+} from "wagmi";
 
 import { contractAddress } from "@eidolonkit/contracts/anvil";
 import { counterAbi } from "@eidolonkit/contracts/wagmi";
@@ -13,6 +17,8 @@ import { cn } from "lib/utils";
 import type { ButtonProps } from "@eidolonkit/ui";
 
 const Increment = ({ className, ...rest }: ButtonProps) => {
+  const { isConnected } = useAccount();
+
   const { refetch } = useCurrentNumber();
 
   const { data: incrementTxHash, writeContract } = useWriteContract();
@@ -29,6 +35,8 @@ const Increment = ({ className, ...rest }: ButtonProps) => {
       address: contractAddress,
       abi: counterAbi,
       functionName: "increment",
+      // TODO: refactor to remove this. Flaky RPC issues. Could try: https://github.com/foundry-rs/foundry/pull/4324
+      gas: 100000n,
     });
 
   useEffect(() => {
@@ -40,7 +48,7 @@ const Increment = ({ className, ...rest }: ButtonProps) => {
   return (
     <Button
       onClick={increment}
-      disabled={isLoading}
+      disabled={isLoading || !isConnected}
       className={cn(className, isLoading && "animate-pulse")}
       {...rest}
     >

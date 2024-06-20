@@ -1,15 +1,30 @@
 "use client";
 
-import { useReadContract } from "wagmi";
+import { useQuery } from "@tanstack/react-query";
+import { anvil } from "wagmi/chains";
 
-import { contractAddress } from "@eidolonkit/contracts/anvil";
-import { counterAbi } from "@eidolonkit/contracts/wagmi";
+import { fetchgql, graphql } from "lib/utils";
+
+const CurrentNumberQuery = graphql(`
+  query Counter($id: String!) {
+    counter(id: $id) {
+      id
+      value
+    }
+  }
+  `);
 
 const useCurrentNumber = () => {
-  const result = useReadContract({
-    address: contractAddress,
-    abi: counterAbi,
-    functionName: "number",
+  const result = useQuery({
+    queryKey: ["currentNumber", anvil.id],
+    queryFn: () =>
+      fetchgql({
+        query: CurrentNumberQuery,
+        variables: {
+          id: anvil.id.toString(),
+        },
+      }),
+    select: (data) => data?.counter?.value,
   });
 
   return result;
