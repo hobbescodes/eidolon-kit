@@ -1,18 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import {
-  useAccount,
-  useWaitForTransactionReceipt,
-  useWriteContract,
-} from "wagmi";
+import { useState } from "react";
+import { useAccount, useWriteContract } from "wagmi";
 
 import { contractAddress } from "@eidolonkit/contracts/anvil";
 import { counterAbi } from "@eidolonkit/contracts/wagmi";
 import { Button, NumberInput } from "@eidolonkit/ui";
 
-import { useCurrentNumber } from "lib/hooks";
-import { cn } from "lib/utils";
+import { Submit } from "components/core";
+import { useCurrentNumber, useTransactionReceipt } from "lib/hooks";
 
 const SetNumber = () => {
   const [number, setNumber] = useState<number>();
@@ -23,11 +19,9 @@ const SetNumber = () => {
 
   const { data: setNumberTxHash, writeContractAsync } = useWriteContract();
 
-  const { isLoading, isSuccess } = useWaitForTransactionReceipt({
+  const { isLoading } = useTransactionReceipt({
     hash: setNumberTxHash,
-    query: {
-      enabled: !!setNumberTxHash,
-    },
+    onSuccess: refetch,
   });
 
   const handleSetNumber = async () => {
@@ -42,12 +36,6 @@ const SetNumber = () => {
 
     setNumber(undefined);
   };
-
-  useEffect(() => {
-    if (isSuccess) {
-      refetch();
-    }
-  }, [isSuccess, refetch]);
 
   return (
     <div className="flex items-center gap-2 max-w-xs">
@@ -65,13 +53,14 @@ const SetNumber = () => {
         // @ts-ignore - TODO: fix TS issues with imported components from ui package
         onValueChange={({ valueAsNumber }) => setNumber(valueAsNumber)}
       />
-      <Button
-        className={cn(isLoading && "animate-pulse")}
-        disabled={isLoading || !isConnected || !number}
-        onClick={handleSetNumber}
-      >
-        Set
-      </Button>
+      <Submit isLoading={isLoading}>
+        <Button
+          disabled={isLoading || !isConnected || !number}
+          onClick={handleSetNumber}
+        >
+          Set
+        </Button>
+      </Submit>
     </div>
   );
 };
