@@ -1,11 +1,7 @@
 import localFont from "next/font/local";
 
+import Providers from "app/providers";
 import { Layout } from "components/layout";
-import {
-  QueryClientProvider,
-  RainbowKitProvider,
-  WagmiProvider,
-} from "providers";
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
@@ -35,13 +31,9 @@ const RootLayout = ({ children }: Readonly<Props>) => {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <WagmiProvider>
-          <QueryClientProvider>
-            <RainbowKitProvider>
-              <Layout>{children}</Layout>
-            </RainbowKitProvider>
-          </QueryClientProvider>
-        </WagmiProvider>
+        <Providers>
+          <Layout>{children}</Layout>
+        </Providers>
       </body>
     </html>
   );
