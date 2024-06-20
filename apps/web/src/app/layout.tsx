@@ -6,7 +6,7 @@ import { Layout } from "components/layout";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import "@eidolonkit/rainbow/styles.css";
+import "@rainbow-me/rainbowkit/styles.css";
 import "./globals.css";
 
 const geistSans = localFont({

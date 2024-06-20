@@ -1,11 +1,12 @@
 "use client";
 
+import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { WagmiProvider } from "wagmi";
+import { anvil } from "viem/chains";
+import { http, WagmiProvider } from "wagmi";
 
-import { rainbowConfig } from "@eidolonkit/rainbow/config";
-import { RainbowKitProvider } from "@eidolonkit/rainbow/kit";
+import { env } from "@eidolonkit/env/web";
 
 import type { ReactNode } from "react";
 
@@ -13,9 +14,20 @@ interface Props {
   children: ReactNode;
 }
 
+const rainbowConfig = getDefaultConfig({
+  appName: "EidolonKit",
+  projectId: env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID,
+  chains: [anvil],
+  ssr: true,
+  transports: {
+    [anvil.id]: http(),
+  },
+});
+
 const queryClient = new QueryClient();
 
 const Providers = ({ children }: Props) => (
+  // @ts-ignore
   <WagmiProvider config={rainbowConfig}>
     <QueryClientProvider client={queryClient}>
       <RainbowKitProvider>{children}</RainbowKitProvider>

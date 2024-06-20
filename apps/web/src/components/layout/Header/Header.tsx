@@ -1,4 +1,4 @@
-import { ConnectButton } from "@eidolonkit/rainbow/kit";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Header = () => (
   <header className="flex py-6 px-4 items-center justify-between">
