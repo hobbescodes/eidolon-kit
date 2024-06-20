@@ -19,9 +19,11 @@
     "@eidolonkit/ui": "*",
     "@rainbow-me/rainbowkit": "^2.1.2",
     "@tanstack/react-query": "^5.45.1",
+    "clsx": "^2.1.1",
     "next": "^14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.3.0",
     "viem": "^2.15.1",
     "vocs": "^1.0.0-alpha.52",
     "wagmi": "^2.10.3"

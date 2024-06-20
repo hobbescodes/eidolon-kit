@@ -1,13 +1,26 @@
 "use client";
 
-import { useWriteContract } from "wagmi";
+import { useEffect } from "react";
+import { useWaitForTransactionReceipt, useWriteContract } from "wagmi";
 
 import { contractAddress } from "@eidolonkit/contracts/anvil";
 import { counterAbi } from "@eidolonkit/contracts/wagmi";
 import { Button } from "@eidolonkit/ui";
 
+import { useCurrentNumber } from "lib/hooks";
+import { cn } from "lib/utils";
+
 const Increment = () => {
-  const { writeContract } = useWriteContract();
+  const { refetch } = useCurrentNumber();
+
+  const { data: incrementTxHash, writeContract } = useWriteContract();
+
+  const { isLoading, isSuccess } = useWaitForTransactionReceipt({
+    hash: incrementTxHash,
+    query: {
+      enabled: !!incrementTxHash,
+    },
+  });
 
   const increment = () =>
     writeContract({
@@ -16,7 +29,17 @@ const Increment = () => {
       functionName: "increment",
     });
 
-  return <Button onClick={increment}>Increment</Button>;
+  useEffect(() => {
+    if (isSuccess) {
+      refetch();
+    }
+  }, [isSuccess, refetch]);
+
+  return (
+    <Button onClick={increment} className={cn(isLoading && "animate-pulse")}>
+      Increment
+    </Button>
+  );
 };
 
 export default Increment;
