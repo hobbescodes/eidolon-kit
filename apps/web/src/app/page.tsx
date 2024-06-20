@@ -1,8 +1,8 @@
-import { Button } from "@eidolonkit/ui";
+import { Increment } from "components/contracts";
 
 const HomePage = () => (
   <div className="flex flex-col h-full items-center justify-center">
-    <Button>Click Me</Button>
+    <Increment />
   </div>
 );
 

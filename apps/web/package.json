@@ -14,6 +14,7 @@
     "docs:preview": "vocs preview"
   },
   "dependencies": {
+    "@eidolonkit/contracts": "*",
     "@eidolonkit/env": "*",
     "@eidolonkit/ui": "*",
     "@rainbow-me/rainbowkit": "^2.1.2",
