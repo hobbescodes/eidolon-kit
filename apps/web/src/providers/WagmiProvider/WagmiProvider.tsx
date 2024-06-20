@@ -2,7 +2,7 @@
 
 import { WagmiProvider as RootWagmiProvider } from "wagmi";
 
-import wagmiConfig from "../../../wagmi.config";
+import { rainbowConfig } from "@eidolonkit/rainbow/config";
 
 import type { ReactNode } from "react";
 
@@ -11,7 +11,7 @@ interface Props {
 }
 
 const WagmiProvider = ({ children }: Props) => (
-  <RootWagmiProvider config={wagmiConfig}>{children}</RootWagmiProvider>
+  <RootWagmiProvider config={rainbowConfig}>{children}</RootWagmiProvider>
 );
 
 export default WagmiProvider;

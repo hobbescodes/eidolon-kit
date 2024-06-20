@@ -10,7 +10,7 @@ import {
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import "@rainbow-me/rainbowkit/styles.css";
+import "@eidolonkit/rainbow/styles.css";
 import "./globals.css";
 
 const geistSans = localFont({

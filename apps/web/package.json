@@ -14,9 +14,8 @@
     "docs:preview": "vocs preview"
   },
   "dependencies": {
-    "@eidolonkit/env": "*",
+    "@eidolonkit/rainbow": "*",
     "@eidolonkit/ui": "*",
-    "@rainbow-me/rainbowkit": "^2.1.2",
     "@tanstack/react-query": "^5.45.1",
     "next": "^14.2.4",
     "react": "^18.3.1",

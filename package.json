@@ -35,7 +35,8 @@
   "packageManager": "bun@1.1.13",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "packages/wallet/*"
   ],
   "trustedDependencies": [
     "@biomejs/biome"

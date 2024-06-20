@@ -4,7 +4,7 @@ import { anvil } from "wagmi/chains";
 
 import { env } from "@eidolonkit/env/web";
 
-const wagmiConfig = getDefaultConfig({
+export const rainbowConfig = getDefaultConfig({
   appName: "EidolonKit",
   projectId: env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID,
   chains: [anvil],
@@ -13,5 +13,3 @@ const wagmiConfig = getDefaultConfig({
     [anvil.id]: http(),
   },
 });
-
-export default wagmiConfig;

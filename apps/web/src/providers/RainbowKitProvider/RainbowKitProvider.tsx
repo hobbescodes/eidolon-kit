@@ -1,4 +1,4 @@
-import { RainbowKitProvider as RootRainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { RainbowKitProvider as RootRainbowKitProvider } from "@eidolonkit/rainbow/kit";
 
 import type { ReactNode } from "react";
 

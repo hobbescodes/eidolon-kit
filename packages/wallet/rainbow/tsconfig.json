@@ -1,0 +1,12 @@
+{
+  "extends": "@eidolonkit/typescript-config/base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo"
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
