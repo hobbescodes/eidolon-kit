@@ -35,14 +35,30 @@ This Turborepo has some additional tools already setup for you:
 - [Renovate](https://www.mend.io/renovate/) for keeping all dependencies up to date
 
 > [!NOTE]
-> Prior to running any of the commands below, it is required to install all necessary dependencies:
+> Prior to running any of the commands from `Build` or `Develop`, it is required to install all necessary dependencies and add appropriate environment variables.
+
+> [!TIP]
+> With the current configuration, you will have to have an encrypted private key (even for local development with anvil) using the generated JSON keystores from `cast wallet import --interactive`. More details can be found [here](https://github.com/foundry-rs/foundry/pull/5551).
+
+### Install Dependencies
 
 ```
 bun install && bun contracts:install
 ```
 
-> [!TIP]
-> With the current configuration, you will have to have an encrypted private key (even for local development with anvil) using the generated JSON keystores from `cast wallet import --interactive`. More details can be found [here](https://github.com/foundry-rs/foundry/pull/5551).
+### Add Environment Variables
+
+1) First, create a `.env` file in the `packages/contracts` directory and add the appropriate environment variables.
+
+```
+cp ./packages/contracts/.env.template ./packages/contracts/.env
+```
+
+2) Next, create a `.env.local` file in the `apps/web` directory and add the appropriate environment variables.
+
+```
+cp ./apps/web/.env.local.template ./apps/web/.env.local
+```
 
 ### Build
 
