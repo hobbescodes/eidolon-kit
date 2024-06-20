@@ -36,7 +36,11 @@ const Increment = () => {
   }, [isSuccess, refetch]);
 
   return (
-    <Button onClick={increment} className={cn(isLoading && "animate-pulse")}>
+    <Button
+      onClick={increment}
+      disabled={isLoading}
+      className={cn(isLoading && "animate-pulse")}
+    >
       Increment
     </Button>
   );
