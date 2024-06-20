@@ -10,7 +10,7 @@ This Turborepo includes the following packages/apps:
 ### Apps and Packages
 
 - `ponder` a [Ponder](https://ponder.sh/) app
-- `web`: another [Next.js](https://nextjs.org/) app
+- `web`: a [Next.js](https://nextjs.org/) app
 - `@eidolonkit/contracts`: a [Foundry](https://book.getfoundry.sh/) project for smart contract development
 - `@eidolonkit/env`: a package for managing environment variables using [T3 Env](https://env.t3.gg/)
 - `@eidolonkit/tailwind`: a [Tailwind](https://tailwindcss.com/) preset
