@@ -8,12 +8,12 @@ const knipConfig: KnipConfig = {
   ignore: ["**/*config*"],
   ignoreDependencies: ["postcss"],
   workspaces: {
-    "packages/contracts": {
-      entry: ["**/*.ts"],
-    },
     "apps/ponder": {
       entry: ["src/**/*.ts"],
       ignore: ["ponder.schema.ts"],
+    },
+    "packages/contracts": {
+      entry: ["**/*.ts"],
     },
     "packages/ui": {
       ignore: [

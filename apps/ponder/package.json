@@ -23,8 +23,7 @@
     "@eidolonkit/typescript-config": "*",
     "@types/node": "^20.9.0",
     "eslint": "^8.53.0",
-    "eslint-config-ponder": "^0.4.37",
-    "typescript": "^5.4.5"
+    "eslint-config-ponder": "^0.4.37"
   },
   "trustedDependencies": [
     "better-sqlite3"

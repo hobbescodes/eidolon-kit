@@ -9,10 +9,12 @@ export const env = createEnv({
   },
   client: {
     NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID: z.string(),
+    NEXT_PUBLIC_PONDER_API_URL: z.string().default("http://127.0.0.1:42069"),
   },
   runtimeEnv: {
     NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID:
       process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID,
+    NEXT_PUBLIC_PONDER_API_URL: process.env.NEXT_PUBLIC_PONDER_API_URL,
     NODE_ENV: process.env.NODE_ENV,
   },
   emptyStringAsUndefined: true,

@@ -12,12 +12,13 @@
     "wagmi:generate": "wagmi generate"
   },
   "exports": {
-    "./wagmi": "./generated/index.ts",
-    "./anvil": "./broadcast/Deploy.s.sol/31337/run-latest.json"
+    "./wagmi": "./generated/wagmi.ts",
+    "./anvil": "./generated/anvil.ts"
   },
   "dependencies": {
     "@eidolonkit/env": "*",
-    "@wagmi/cli": "^2.1.10"
+    "@wagmi/cli": "^2.1.10",
+    "viem": "^2.15.1"
   },
   "devDependencies": {
     "@eidolonkit/typescript-config": "*",

@@ -1,7 +1,17 @@
 {
   "extends": "@eidolonkit/typescript-config/nextjs.json",
   "compilerOptions": {
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "plugins": [
+      {
+        "name": "@0no-co/graphqlsp",
+        "schema": "./src/generated/schema.graphql",
+        "tadaOutputLocation": "./graphql-env.d.ts"
+      },
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
