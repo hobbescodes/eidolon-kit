@@ -12,7 +12,7 @@ const tsupConfig = defineTsupConfig(async (opts) => ({
   splitting: true,
   sourcemap: true,
   minify: !opts.watch,
-  experimentalDts: true,
+  dts: true,
   outDir: "dist",
   tsconfig: "tsconfig.build.json",
 }));

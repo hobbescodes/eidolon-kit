@@ -6,7 +6,8 @@
   "linter": {
     "enabled": true,
     "ignore": [
-      "**/*.d.ts"
+      "**/*.d.ts",
+      "dist/**/*"
     ],
     "rules": {
       "recommended": true,

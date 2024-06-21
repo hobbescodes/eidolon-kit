@@ -49,8 +49,7 @@ const SetNumber = () => {
           maximumFractionDigits: 0,
         }}
         disabled={isLoading || !isConnected}
-        value={number ?? ""}
-        // @ts-ignore - TODO: fix TS issues with imported components from ui package
+        value={number?.toString() ?? ""}
         onValueChange={({ valueAsNumber }) => setNumber(valueAsNumber)}
       />
       <Submit isLoading={isLoading}>
