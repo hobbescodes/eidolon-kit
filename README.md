@@ -86,11 +86,14 @@ bun anvil
 bun contracts:deploy
 ```
 
-3. Spin up remaining development servers (with default configuration this includes servers spun up with `docs:dev`):
+3. Spin up remaining development servers:
 
 ```
 bun dev
 ```
+
+> [!TIP]
+> If you do not want the `dev` command to include spinning up the docs servers, you can update the `dev` script in the root `package.json` to `turbo run dev`
 
 ### Remote Caching
 
