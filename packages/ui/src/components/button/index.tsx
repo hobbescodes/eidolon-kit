@@ -29,7 +29,7 @@ const button = tv(
     defaultVariants: { variant: "solid", size: "md" },
     variants: {
       variant: {
-        solid: "button--variant_solid",
+        solid: "button--variant_solid disabled:bg-[var(--colors-accent-3)]",
         outline: "button--variant_outline",
         ghost: "button--variant_ghost",
         link: "button--variant_link",
