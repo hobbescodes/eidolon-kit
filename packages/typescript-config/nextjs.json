@@ -8,11 +8,6 @@
       "dom.iterable",
       "esnext"
     ],
-    "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "jsx": "preserve"
   }
 }
