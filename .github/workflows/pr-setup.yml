@@ -1,9 +1,6 @@
 name: PR Setup 📦
 
-on:
-  pull_request:
-    branches-ignore:
-      - "renovate/**"
+on: [pull_request]
 
 env:
   FOUNDRY_PROFILE: ci
