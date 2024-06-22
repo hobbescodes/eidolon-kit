@@ -7,9 +7,7 @@ import { Button } from ".";
 
 const onClick = jest.fn();
 
-afterEach(() => {
-  cleanup();
-});
+afterEach(cleanup);
 
 beforeEach(() => {
   render(<Button onClick={onClick}>Testing</Button>);

@@ -5,9 +5,7 @@ import { userEvent } from "@testing-library/user-event";
 import { render } from "~/test";
 import { NumberInput } from ".";
 
-afterEach(() => {
-  cleanup();
-});
+afterEach(cleanup);
 
 beforeEach(() => {
   render(<NumberInput />);
