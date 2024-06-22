@@ -19,4 +19,4 @@ runs:
 
     - name: Install dependencies
       shell: bash
-      run: bun install && bun contracts:install
+      run: bun install

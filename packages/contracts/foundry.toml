@@ -2,6 +2,10 @@
 src = "src"
 out = "out"
 
+[profile.ci]
+fuzz_runs = 100_000
+verbosity = 4
+
 [fmt]
 bracket_spacing = true
 int_types = "long"
