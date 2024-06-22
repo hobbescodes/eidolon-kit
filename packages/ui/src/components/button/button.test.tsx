@@ -1,28 +1,28 @@
-import { afterEach, describe, expect, it, jest } from "bun:test";
+import { afterEach, beforeEach, describe, expect, it, jest } from "bun:test";
 import { cleanup, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 
 import { render } from "~/test";
 import { Button } from ".";
 
+const onClick = jest.fn();
+
 afterEach(() => {
   cleanup();
 });
 
+beforeEach(() => {
+  render(<Button onClick={onClick}>Testing</Button>);
+});
+
 describe("Button", () => {
   it("default button variant is rendered", () => {
-    render(<Button>Testing</Button>);
-
     const button = screen.getByText("Testing");
 
     expect(button.classList).toContain("button--variant_solid");
   });
 
   it("onClick gets called", async () => {
-    const onClick = jest.fn();
-
-    render(<Button onClick={onClick}>Testing</Button>);
-
     const button = screen.getByText("Testing");
 
     await userEvent.click(button);
@@ -33,12 +33,12 @@ describe("Button", () => {
   it("asChild prop renders child only", async () => {
     render(
       <Button asChild>
-        <p>Testing</p>
+        <p>As Child</p>
       </Button>,
     );
 
-    const button = screen.queryByRole("button");
+    const buttons = screen.getAllByRole("button");
 
-    expect(button).toBeNull();
+    expect(buttons).toHaveLength(1);
   });
 });

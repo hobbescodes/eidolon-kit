@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it } from "bun:test";
+import { afterEach, beforeEach, describe, expect, it } from "bun:test";
 import { cleanup, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 
@@ -9,18 +9,18 @@ afterEach(() => {
   cleanup();
 });
 
+beforeEach(() => {
+  render(<NumberInput />);
+});
+
 describe("Number Input", () => {
   it("default number input variant is rendered", () => {
-    render(<NumberInput />);
-
     const numberInput = screen.getByRole("spinbutton");
 
     expect(numberInput.classList).toContain("numberInput__input--size_md");
   });
 
   it("increments value", async () => {
-    render(<NumberInput />);
-
     const numberInput = screen.getByRole("spinbutton");
 
     const incrementButton = screen.getByLabelText("increment value");
@@ -31,8 +31,6 @@ describe("Number Input", () => {
   });
 
   it("decreases value", async () => {
-    render(<NumberInput />);
-
     const numberInput = screen.getByRole("spinbutton");
 
     const decrementButton = screen.getByLabelText("decrease value");
