@@ -5,6 +5,9 @@
     "**/*.tsx"
   ],
   "exclude": [
+    "bunfig.toml",
+    "setup.ts",
+    "**/*.test.tsx",
     ".turbo",
     "dist",
     "node_modules"
