@@ -5,6 +5,7 @@
     "setup.ts",
     "**/*.test.tsx",
     "dist",
-    "src/scripts"
+    "src/scripts",
+    "src/test"
   ]
 }
