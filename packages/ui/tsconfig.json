@@ -1,3 +1,18 @@
 {
-  "extends": "@eidolonkit/typescript-config/react-library.json"
+  "extends": "@eidolonkit/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.tsx"
+  ],
+  "exclude": [
+    ".tsup",
+    "dist"
+  ]
 }

@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it } from "bun:test";
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import React from "react";
 
+import render from "~/test/render";
 import { NumberInput } from ".";
 
 afterEach(() => {

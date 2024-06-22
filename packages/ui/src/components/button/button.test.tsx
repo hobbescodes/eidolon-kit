@@ -1,10 +1,8 @@
-// @ts-nocheck - TODO: figure out issue with types for rendered components (i.e. children does not exist)
-
 import { afterEach, describe, expect, it, jest } from "bun:test";
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import React from "react";
 
+import render from "~/test/render";
 import { Button } from ".";
 
 afterEach(() => {
