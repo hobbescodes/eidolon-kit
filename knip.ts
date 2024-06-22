@@ -21,7 +21,7 @@ const knipConfig: KnipConfig = {
         // TODO: remove when more components are added that depend on create style context
         "src/lib/create-style-context.tsx",
       ],
-      entry: ["**/index.ts", "**/index.tsx"],
+      entry: ["**/index.ts", "**/index.tsx", "**/*.test.tsx", "setup.ts"],
     },
   },
 };

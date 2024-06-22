@@ -1,12 +1,11 @@
 {
   "extends": "./tsconfig.json",
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
   "exclude": [
-    ".turbo",
+    "bunfig.toml",
+    "setup.ts",
+    "**/*.test.tsx",
     "dist",
-    "node_modules"
+    "src/scripts",
+    "src/test"
   ]
 }

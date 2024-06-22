@@ -9,12 +9,18 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
+#### Apps
+
 - `ponder` a [Ponder](https://ponder.sh/) app
 - `web`: a [Next.js](https://nextjs.org/) app
+
+#### Packages
+
+- `packages/config`
+  - `@eidolonkit/env`: a package for managing environment variables using [T3 Env](https://env.t3.gg/)
+  - `@eidolonkit/tailwind`: a [Tailwind](https://tailwindcss.com/) preset
+  - `@eidolonkit/typescript-config`: `tsconfig.json`s used throughout the monorepo
 - `@eidolonkit/contracts`: a [Foundry](https://book.getfoundry.sh/) project for smart contract development
-- `@eidolonkit/env`: a package for managing environment variables using [T3 Env](https://env.t3.gg/)
-- `@eidolonkit/tailwind`: a [Tailwind](https://tailwindcss.com/) preset
-- `@eidolonkit/typescript-config`: `tsconfig.json`s used throughout the monorepo
 - `@eidolonkit/ui`: a component library for use in react based applications
 
 ### Utilities
@@ -31,6 +37,7 @@ This Turborepo has some additional tools already setup for you:
 - [Vocs](https://vocs.dev/) for documentation site generation
 - [Tailwind](https://tailwindcss.com/) for styling
 - [Park UI](https://park-ui.com/) for scaffolding the ui component library package
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for testing react components
 - [Biome](https://biomejs.dev/) for code linting and formatting
 - [Knip](https://knip.dev/) for finding unused files, dependencies and exports
 - [Husky](https://typicode.github.io/husky/), [Commitlint](https://commitlint.js.org/), and [Lint-Staged](https://github.com/okonet/lint-staged) for commit message and staged file linting
