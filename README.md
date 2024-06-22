@@ -40,6 +40,7 @@ This Turborepo has some additional tools already setup for you:
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for testing react components
 - [Biome](https://biomejs.dev/) for code linting and formatting
 - [Knip](https://knip.dev/) for finding unused files, dependencies and exports
+- [Github Actions](https://github.com/features/actions) for CI/CD
 - [Husky](https://typicode.github.io/husky/), [Commitlint](https://commitlint.js.org/), and [Lint-Staged](https://github.com/okonet/lint-staged) for commit message and staged file linting
 - [Renovate](https://www.mend.io/renovate/) for keeping all dependencies up to date
 
