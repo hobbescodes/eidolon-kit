@@ -8,6 +8,7 @@
     "lint": "turbo lint",
     "format": "turbo format",
     "knip": "SKIP_ENV_VALIDATION=true bun run --env-file ./apps/web/.env.local knip-bun --tags=-knipignore",
+    "knip:ci": "SKIP_ENV_VALIDATION=true knip-bun --tags=-knipignore",
     "prepare": "husky",
     "test": "turbo test",
     "contracts:install": "bun --filter @eidolonkit/contracts soldeer",
