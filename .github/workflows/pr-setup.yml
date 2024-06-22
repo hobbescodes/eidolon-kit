@@ -24,11 +24,11 @@ jobs:
         with:
           version: nightly
 
-      - name: Install Contract Dependencies
-        run: bun contracts:install
-
       - name: Setup
         uses: ./.github/actions/setup
+
+      - name: Install Contract Dependencies
+        run: bun contracts:install
 
       - name: Checks
         run: bun knip --tags=-knipignore && bun turbo lint format
