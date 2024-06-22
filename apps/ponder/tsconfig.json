@@ -1,14 +1,7 @@
 {
   "extends": "@eidolonkit/typescript-config/base.json",
   "compilerOptions": {
-    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
     "verbatimModuleSyntax": false,
     "allowSyntheticDefaultImports": true
-  },
-  "include": [
-    "**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  }
 }

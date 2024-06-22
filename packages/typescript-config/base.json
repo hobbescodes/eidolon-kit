@@ -29,8 +29,16 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "incremental": true,
+    "tsBuildInfoFile": "${configDir}/.tsbuildinfo",
     "types": [
       "@types/bun"
     ]
-  }
+  },
+  "include": [
+    "${configDir}/**/*.ts"
+  ],
+  "exclude": [
+    "${configDir}/.turbo",
+    "${configDir}/node_modules"
+  ]
 }

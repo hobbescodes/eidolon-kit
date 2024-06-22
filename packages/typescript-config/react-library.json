@@ -9,6 +9,19 @@
       "DOM",
       "DOM.Iterable"
     ],
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "${configDir}",
+    "paths": {
+      "~/*": [
+        "${configDir}/src/*"
+      ]
+    },
+    "include": [
+      "${configDir}/**/*.tsx"
+    ],
+    "exclude": [
+      "${configDir}/.tsup",
+      "${configDir}/dist"
+    ]
   }
 }
