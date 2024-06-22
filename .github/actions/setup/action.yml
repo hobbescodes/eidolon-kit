@@ -17,15 +17,11 @@ runs:
         restore-keys: |
           ${{ runner.os }}-${{ matrix.bun }}-bun-
 
-    - name: Install dependencies
-      shell: bash
-      run: bun install
-
     - name: Setup foundry
       uses: foundry-rs/foundry-toolchain@v1
       with:
         version: nightly
 
-    - name: Install contract dependencies
+    - name: Install dependencies
       shell: bash
-      run: bun contracts:install
+      run: bun install && bun contracts:install
