@@ -54,8 +54,5 @@ jobs:
       - name: Install Contract Dependencies
         run: bun contracts:install
 
-      - name: Build packages
-        run: bun run build
-
       - name: Run unit tests
         run: bun run test
