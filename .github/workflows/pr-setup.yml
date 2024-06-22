@@ -10,7 +10,7 @@ env:
 
 jobs:
   lint-and-format:
-    name: Lint and Format
+    name: Lint and Format 🛠️
     runs-on: ubuntu-latest
 
     steps:
@@ -32,3 +32,30 @@ jobs:
 
       - name: Checks
         run: bun knip && bun turbo lint format
+
+  unit-tests:
+    name: Unit Tests 🧪
+    needs: lint-and-format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Install Contract Dependencies
+        run: bun contracts:install
+
+      - name: Build packages
+        run: bun run build
+
+      - name: Run unit tests
+        run: bun run test
