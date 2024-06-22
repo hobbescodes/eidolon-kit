@@ -1,0 +1,22 @@
+name: Setup
+description: Common setup steps for all workflows
+
+runs:
+  using: composite
+  steps:
+    - name: Setup bun
+      uses: oven-sh/setup-bun@v1
+      with:
+          bun-version: latest
+
+    - name: Setup bun cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.bun/install/cache
+        key: ${{ runner.os }}-${{ matrix.bun }}-bun-${{ hashFiles('**/bun.lockb') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ matrix.bun }}-bun-
+
+    - name: Install dependencies
+      shell: bash
+      run: bun install && bun contracts:install
