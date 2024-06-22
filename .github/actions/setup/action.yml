@@ -20,3 +20,12 @@ runs:
     - name: Install dependencies
       shell: bash
       run: bun install
+
+    - name: Setup foundry
+      uses: foundry-rs/foundry-toolchain@v1
+      with:
+        version: nightly
+
+    - name: Install contract dependencies
+      shell: bash
+      run: bun contracts:install
