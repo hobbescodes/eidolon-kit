@@ -8,6 +8,7 @@ on:
 
 env:
   FOUNDRY_PROFILE: ci
+  NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID }}
 
 jobs:
   lint-and-format:

@@ -1,5 +1,8 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalPassThroughEnv": [
+    "NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID"
+  ],
   "tasks": {
     "build": {
       "dependsOn": [
