@@ -6,7 +6,7 @@ const knipConfig: KnipConfig = {
     unlisted: "warn",
   },
   ignore: ["**/*config*"],
-  ignoreDependencies: ["postcss"],
+  ignoreDependencies: ["@commitlint/cz-commitlint", "postcss"],
   workspaces: {
     "apps/ponder": {
       entry: ["src/**/*.ts"],
