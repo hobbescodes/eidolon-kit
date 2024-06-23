@@ -13,6 +13,7 @@
     "test": "turbo test",
     "contracts:install": "bun --filter @eidolonkit/contracts soldeer",
     "contracts:deploy": "bun --filter @eidolonkit/contracts deploy",
+    "contracts:deploy:ci": "bun --filter @eidolonkit/contracts deploy:ci",
     "ui:add": "bun --filter @eidolonkit/ui ui:add"
   },
   "devDependencies": {
@@ -31,7 +32,7 @@
   "lint-staged": {
     "**/*.{ts,tsx}": [
       "biome format --write",
-      "biome lint"
+      "biome lint --no-errors-on-unmatched"
     ]
   },
   "packageManager": "bun@1.1.16",

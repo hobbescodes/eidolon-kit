@@ -8,6 +8,7 @@ on:
 
 env:
   FOUNDRY_PROFILE: ci
+  NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID }}
 
 jobs:
   lint-and-format:
@@ -37,3 +38,22 @@ jobs:
 
       - name: Run unit tests
         run: bun run test
+
+  deploy-and-build:
+    name: Deploy and Build 🧱
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Spin up environment
+        uses: ./.github/actions/deploy
+
+      - name: Build
+        run: bun run build
