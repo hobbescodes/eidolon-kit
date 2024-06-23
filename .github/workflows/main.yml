@@ -37,3 +37,25 @@ jobs:
 
       - name: Run unit tests
         run: bun run test
+
+  deploy-and-build:
+    name: Deploy and Build 🧱
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Spin up anvil
+        run: bun anvil
+
+      - name: Deploy contracts
+        run: bun contracts:deploy:ci
+
+      - name: Build
+        run: bun run build
