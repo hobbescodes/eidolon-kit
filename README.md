@@ -1,5 +1,7 @@
 # Eidolon Kit 🔮
 
+![GitHub License](https://img.shields.io/github/license/hobbescodes/eidolon-kit?label=License) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/hobbescodes/eidolon-kit/main.yml?branch=master&event=push&label=CI) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/hobbescodes/eidolon-kit?label=Issues) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/hobbescodes/eidolon-kit/master?label=Last%20Commit)
+
 > [!IMPORTANT]
 > ‼️ This is a work in progress. The current version of the kit is not ready for production use. ‼️
 
@@ -120,14 +122,3 @@ Next, you can link your Turborepo to your Remote Cache by running the following 
 ```
 bunx turbo link
 ```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
