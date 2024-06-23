@@ -40,7 +40,6 @@ yarn-error.log*
 # Typescript
 *.tsbuildinfo
 next-env.d.ts
-graphql-env.d.ts
 
 # Misc
 .DS_Store

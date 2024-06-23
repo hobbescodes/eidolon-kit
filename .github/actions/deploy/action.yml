@@ -1,0 +1,13 @@
+name: Deploy
+description: Spin up anvil and deploy contracts
+
+runs:
+  using: composite
+  steps:
+    - name: Spin up anvil
+      shell: bash
+      run: bun anvil &
+
+    - name: Deploy contracts
+      shell: bash
+      run: bun contracts:deploy:ci

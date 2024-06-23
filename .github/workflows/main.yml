@@ -51,11 +51,8 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
 
-      - name: Spin up anvil
-        run: bun anvil &
-
-      - name: Deploy contracts
-        run: bun contracts:deploy:ci
+      - name: Spin up environment
+        uses: ./.github/actions/deploy
 
       - name: Build
         run: bun run build

@@ -32,7 +32,7 @@
   "lint-staged": {
     "**/*.{ts,tsx}": [
       "biome format --write",
-      "biome lint"
+      "biome lint --no-errors-on-unmatched"
     ]
   },
   "packageManager": "bun@1.1.16",
