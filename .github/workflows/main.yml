@@ -1,6 +1,10 @@
-name: PR Setup 📦
+name: CI Workflows 📦
 
-on: [pull_request]
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 env:
   FOUNDRY_PROFILE: ci
