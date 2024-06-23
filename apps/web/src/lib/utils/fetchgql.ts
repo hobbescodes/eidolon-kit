@@ -23,7 +23,7 @@ const fetchgql = async <TData, TVariables>({
 }: Props<TData, TVariables>): Promise<TData> => {
   const { next, cache, ...restOptions } = options || {};
 
-  const client = new GraphQLClient(env.NEXT_PUBLIC_PONDER_API_URL, {
+  const client = new GraphQLClient(env.NEXT_PUBLIC_PONDER_GRAPHQL_API_URL, {
     headers: {
       "Content-Type": "application/json",
       ...restOptions,
