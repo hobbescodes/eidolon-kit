@@ -1,5 +1,8 @@
 # Eidolon Kit 🔮
 
+![GitHub License](https://img.shields.io/github/license/hobbescodes/eidolon-kit?label=License)
+
+
 > [!IMPORTANT]
 > ‼️ This is a work in progress. The current version of the kit is not ready for production use. ‼️
 
