@@ -1,6 +1,6 @@
 # Eidolon Kit 🔮
 
-![GitHub License](https://img.shields.io/github/license/hobbescodes/eidolon-kit?label=License)
+![GitHub License](https://img.shields.io/github/license/hobbescodes/eidolon-kit?label=License) ![GitHub branch status](https://img.shields.io/github/checks-status/hobbescodes/eidolon-kit/master?label=Checks)
 
 
 > [!IMPORTANT]
