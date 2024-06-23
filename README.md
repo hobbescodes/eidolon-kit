@@ -19,7 +19,7 @@ This Turborepo includes the following packages/apps:
 - `packages/config`
   - `@eidolonkit/env`: a package for managing environment variables using [T3 Env](https://env.t3.gg/)
   - `@eidolonkit/tailwind`: a [Tailwind](https://tailwindcss.com/) preset
-  - `@eidolonkit/typescript-config`: `tsconfig.json`s used throughout the monorepo
+  - `@eidolonkit/tsconfig`: `tsconfig.json`s used throughout the monorepo
 - `@eidolonkit/contracts`: a [Foundry](https://book.getfoundry.sh/) project for smart contract development
 - `@eidolonkit/ui`: a component library for use in react based applications
 

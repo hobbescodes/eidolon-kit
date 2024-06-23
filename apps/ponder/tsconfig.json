@@ -1,5 +1,5 @@
 {
-  "extends": "@eidolonkit/typescript-config/base.json",
+  "extends": "@eidolonkit/tsconfig/base.json",
   "compilerOptions": {
     "verbatimModuleSyntax": false,
     "allowSyntheticDefaultImports": true

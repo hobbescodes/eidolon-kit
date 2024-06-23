@@ -21,7 +21,7 @@
     "viem": "^2.15.1"
   },
   "devDependencies": {
-    "@eidolonkit/typescript-config": "*",
+    "@eidolonkit/tsconfig": "*",
     "solhint": "^5.0.1"
   }
 }

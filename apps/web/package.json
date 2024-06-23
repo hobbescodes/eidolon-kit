@@ -35,7 +35,7 @@
   "devDependencies": {
     "@0no-co/graphqlsp": "^1.12.8",
     "@eidolonkit/tailwind": "*",
-    "@eidolonkit/typescript-config": "*",
+    "@eidolonkit/tsconfig": "*",
     "@graphql-codegen/cli": "^5.0.2",
     "@graphql-codegen/schema-ast": "^4.0.2",
     "@tanstack/react-query-devtools": "^5.45.1",

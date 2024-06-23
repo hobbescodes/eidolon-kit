@@ -1,5 +1,5 @@
 {
-  "extends": "@eidolonkit/typescript-config/nextjs.json",
+  "extends": "@eidolonkit/tsconfig/nextjs.json",
   "compilerOptions": {
     "baseUrl": "src",
     "plugins": [

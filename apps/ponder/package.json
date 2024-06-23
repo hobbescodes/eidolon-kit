@@ -20,7 +20,7 @@
     "vocs": "^1.0.0-alpha.52"
   },
   "devDependencies": {
-    "@eidolonkit/typescript-config": "*",
+    "@eidolonkit/tsconfig": "*",
     "@types/node": "^20.9.0",
     "eslint": "^8.53.0",
     "eslint-config-ponder": "^0.4.37"

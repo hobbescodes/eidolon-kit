@@ -1,5 +1,5 @@
 {
-  "extends": "@eidolonkit/typescript-config/react-library.json",
+  "extends": "@eidolonkit/tsconfig/react-library.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
