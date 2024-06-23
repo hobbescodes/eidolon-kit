@@ -52,7 +52,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Spin up anvil
-        run: bun anvil
+        run: bun anvil &
 
       - name: Deploy contracts
         run: bun contracts:deploy:ci
