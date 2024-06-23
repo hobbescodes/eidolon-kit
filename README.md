@@ -1,8 +1,6 @@
 # Eidolon Kit 🔮
 
-![GitHub License](https://img.shields.io/github/license/hobbescodes/eidolon-kit?label=License) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/hobbescodes/eidolon-kit/main.yml?branch=master&event=push&label=CI)
-
-
+![GitHub License](https://img.shields.io/github/license/hobbescodes/eidolon-kit?label=License) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/hobbescodes/eidolon-kit/main.yml?branch=master&event=push&label=CI) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/hobbescodes/eidolon-kit?label=Issues) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/hobbescodes/eidolon-kit/master?label=Last%20Commit)
 
 > [!IMPORTANT]
 > ‼️ This is a work in progress. The current version of the kit is not ready for production use. ‼️
