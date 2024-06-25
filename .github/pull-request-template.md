@@ -6,7 +6,7 @@ Fixes # (issue)
 
 ## Type of change
 
-<!-- Please select all options that are applicable. -->
+<!-- Please select all options that are applicable, and then remove the ones that are not. -->
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
