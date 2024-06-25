@@ -8,8 +8,24 @@ export default defineConfig({
       text: "Getting Started",
       link: "/",
     },
+    {
+      text: "Common Workflows",
+      link: "/common-workflows",
+    },
+    {
+      text: "Common Issues",
+      link: "/common-issues",
+    },
   ],
   theme: {
     accentColor: "#86ead4",
+  },
+  markdown: {
+    code: {
+      themes: {
+        light: "catppuccin-mocha",
+        dark: "catppuccin-mocha",
+      },
+    },
   },
 });

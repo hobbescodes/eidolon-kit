@@ -1,0 +1,25 @@
+# Common Issues
+
+There are a few common issues that you might encounter when developing with the ponder application. Below is a quick overview of those and how to resolve them.
+
+## Anvil node is not running
+
+If you run into an issue where `Historical sync` is constantly in a `Waiting to start...` state, it is likely that the Anvil node is not running. To resolve this, in a separate terminal window, run the following from the root directory of the turborepo:
+
+```zsh
+bun anvil
+```
+
+## Contract(s) are not deployed
+
+If your local anvil node is running, and you run into an error that includes the following message:
+
+```
+PM FATAL process Finished shutdown sequence, terminating (exit code 1)
+```
+
+It is likely that the contract(s) have not been deployed on the currently running instance of your anvil node. To resolve this, run the following from the root directory of the turborepo:
+
+```zsh
+bun contracts:deploy
+```
