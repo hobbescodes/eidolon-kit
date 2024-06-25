@@ -1,3 +1,119 @@
-# Documentation [This is the documentation site for the ponder application.]
+# Getting Started [Understand the core concepts and features of the ponder application.]
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim. Fusc sed tincidunt odio. Mauris vel nibh sed nulla pel elementum sagittis. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.
+The intention of the ponder application is to provide a rapid development environment for APIs. It is built on top of [Ponder](https://ponder.sh/), a framework for building APIs on top of any EVM smart contract.
+
+## Core Concepts and Features
+
+### Designing your Schema
+
+The `ponder.schema.ts` file contains the database schema, and defines the shape of the data that the API serves. The default schema looks as follows:
+
+```ts filename="ponder.schema.ts"
+import { createSchema } from "@ponder/core";
+
+export default createSchema((p) => ({
+  Counter: p.createTable({
+    id: p.string(),
+    value: p.bigint(),
+  }),
+}));
+```
+
+To learn more about patterns for designing your schema, check out the [Ponder documentation](https://ponder.sh/docs/schema).
+
+### Configuring your API
+
+The `ponder.config.ts` file contains the configuration for your API. It is used to define the network(s) and contract configuration(s)s for your API. The default configuration looks as follows:
+
+```ts filename="ponder.config.ts"
+import { createConfig } from "@ponder/core";
+import { http } from "viem";
+
+import { contractAddress, startBlock } from "@eidolonkit/contracts/anvil";
+import { counterAbi } from "@eidolonkit/contracts/wagmi";
+import { env } from "@eidolonkit/env/blockchain";
+
+export default createConfig({
+  networks: {
+    anvil: {
+      chainId: 31337,
+      transport: http(env.RPC_URL),
+      disableCache: true,
+    },
+  },
+  contracts: {
+    Counter: {
+      network: "anvil",
+      abi: counterAbi,
+      address: contractAddress,
+      startBlock,
+      includeCallTraces: true,
+    },
+  },
+});
+```
+
+To learn more about patterns for configuring your API, check out the [Ponder documentation](https://ponder.sh/docs/contracts-and-networks).
+
+### Indexing Functions
+
+Files contained in the `src` directory (outside of the `api` directory) are used to defined the indexing functions for your API. These functions provide the logic to process contract events and call traces, and insert data into the store. The default indexing functions look as follows:
+
+```ts filename="src/Counter.ts"
+import { ponder } from "@/generated";
+
+ponder.on("Counter.setNumber()", async ({ event, context }) => {
+  const {
+    db: { Counter },
+    network: { chainId },
+  } = context;
+
+  const updatedNumber = event.args[0];
+
+  await Counter.upsert({
+    id: chainId.toString(),
+    create: {
+      value: updatedNumber,
+    },
+    update: {
+      value: updatedNumber,
+    },
+  });
+});
+
+ponder.on("Counter.increment()", async ({ context }) => {
+  const {
+    db: { Counter },
+    network: { chainId },
+  } = context;
+
+  await Counter.upsert({
+    id: chainId.toString(),
+    // NB: if `increment` is the first trigger, that means that `number` is still initialized to 0, so we can safely use `1n`
+    create: {
+      value: 1n,
+    },
+    update: ({ current }) => ({
+      value: current.value + 1n,
+    }),
+  });
+});
+```
+
+The indexing functions are the secret sauce of the ponder application. There is a lot of flexibility built within by ponder to allow you to define your own indexing functions. To learn more about patterns for indexing functions, check out the [Ponder documentation](https://ponder.sh/docs/indexing/create-update-records).
+
+### API Functions
+
+The API functions are used to response to incoming web requests. They are great to custominze the API layer of the ponder application. The default API functions look as follows:
+
+```ts filename="api/index.ts"
+import { ponder } from "@/generated";
+import { graphql } from "@ponder/core";
+import { cors } from "hono/cors";
+
+ponder.use("*", cors());
+
+ponder.use("/graphql", graphql());
+```
+
+You will notice that the `graphql` middleware provided by `@ponder/core` is used. This is a means to register the standard GraphQL API that was automatically included in ponder versions `<0.5.0`. This is opt in, and more information about defining your own API functions can be found in the [Ponder documentation](https://ponder-docs-git-kjs-api2-ponder-sh.vercel.app/docs/query/api-functions).
