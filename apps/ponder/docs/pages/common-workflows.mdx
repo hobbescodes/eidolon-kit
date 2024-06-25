@@ -1,0 +1,54 @@
+# Common Workflows
+
+There are a few common workflows that you will want to use when developing with the ponder application. Below is a quick overview of those.
+
+:::info
+**Quick Note:**
+
+`ponder-env-d.ts` is what makes the zero-codegen type system possible. This file contains a module declaration for `"@/generated"` that exports types derived from `ponder.config.ts` and `ponder.schema.ts`.
+
+:::warning
+Occasionally, Ponder's dev server may make changes to `ponder-env.d.ts` after upgrading to a new version of `@ponder/core`. When this happens, remember to commit the changes into version control.
+:::
+
+## Generating Files
+
+The `generated` directory is where the auto-generated GraphQL schema file is stored (`schema.graphql`). This file is generated from the `codegen` script:
+
+#### From the `apps/ponder` directory:
+
+```zsh
+bun codegen
+```
+
+#### From the root directory of the turborepo:
+
+```zsh
+bun --filter ponder codegen
+```
+
+:::tip
+Typically, it is best practice to re-generate this file whenever you make changes to the `ponder.schema.ts` file. This ensures that the schema is always up-to-date.
+:::
+
+## Testing the API
+
+### GraphiQL
+
+One feature of the ponder application (when using the `graphql` middleware) is the ability to run a [GraphiQL](https://github.com/graphql/graphiql) instance that can be used to test the API in isolation.
+
+To run the GraphiQL instance, run the following command:
+
+#### From the `apps/ponder` directory:
+
+```zsh
+bun dev
+```
+
+#### From the root directory of the turborepo:
+
+```zsh
+bun --filter ponder dev
+```
+
+This will start the GraphiQL instance on `http://localhost:42069/graphql`.
