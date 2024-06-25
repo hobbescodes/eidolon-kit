@@ -13,8 +13,8 @@ This Turborepo includes the following packages/apps:
 
 #### Apps
 
-- `ponder` a [Ponder](https://ponder.sh/) app
-- `web`: a [Next.js](https://nextjs.org/) app
+- `ponder` a [Ponder](https://ponder.sh/) application for rapid API development on top of any EVM smart contract
+- `web`: a [Next.js](https://nextjs.org/) app for the web application
 
 #### Packages
 
@@ -23,7 +23,7 @@ This Turborepo includes the following packages/apps:
   - `@eidolonkit/tailwind`: a [Tailwind](https://tailwindcss.com/) preset
   - `@eidolonkit/tsconfig`: `tsconfig.json`s used throughout the monorepo
 - `@eidolonkit/contracts`: a [Foundry](https://book.getfoundry.sh/) project for smart contract development
-- `@eidolonkit/ui`: a component library for use in react based applications
+- `@eidolonkit/ui`: a component library for use in react based applications throughout the monorepo
 
 ### Utilities
 
