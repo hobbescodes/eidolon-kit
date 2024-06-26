@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/hobbescodes/eidolon-kit/eidolon.jpg" alt="Cover image" width="700px">
+  <img src="https://github.com/hobbescodes/eidolon-kit/blob/master/eidolon.jpg" alt="Cover image" width="700px">
 </div>
 
 # Eidolon Kit 🔮
