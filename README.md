@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://github.com/hobbescodes/eidolon-kit/eidolon.jpg" alt="Cover image" width="700px">
+</div>
+
 # Eidolon Kit 🔮
 
 ![GitHub License](https://img.shields.io/github/license/hobbescodes/eidolon-kit?label=License) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/hobbescodes/eidolon-kit/main.yml?branch=master&event=push&label=CI) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/hobbescodes/eidolon-kit?label=Issues) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/hobbescodes/eidolon-kit/master?label=Last%20Commit) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?label=Commitizen)](http://commitizen.github.io/cz-cli/)
