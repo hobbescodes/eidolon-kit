@@ -36,6 +36,7 @@ This Turborepo has some additional tools already setup for you:
 - [Wagmi](https://wagmi.sh/) for connection to Ethereum through a collection of type safe react hooks
 - [RainbowKit](https://rainbowkit.com/) for wallet connection
 - [Ponder](https://ponder.sh/) for rapid API development on top of any EVM smart contract
+- [Tanstack Query](https://tanstack.com/query/v5) for asynchronous state management
 - [Vocs](https://vocs.dev/) for documentation site generation
 - [Tailwind](https://tailwindcss.com/) for styling
 - [Park UI](https://park-ui.com/) for scaffolding the ui component library package
