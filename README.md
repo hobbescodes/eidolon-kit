@@ -6,7 +6,7 @@
 > ‼️ This is a work in progress. The current version of the kit is not ready for production use. ‼️
 
 <div align="center">
-  <img src="https://github.com/hobbescodes/eidolon-kit/blob/master/eidolon.jpg" alt="Cover image" width="700px">
+  <img src="https://github.com/hobbescodes/eidolon-kit/blob/master/eidolon.png" alt="Cover image" width="700px">
 </div>
 
 ## What's inside?
