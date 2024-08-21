@@ -23,7 +23,7 @@
   "devDependencies": {
     "@eidolonkit/tailwind": "*",
     "@eidolonkit/tsconfig": "*",
-    "@happy-dom/global-registrator": "^14.12.3",
+    "@happy-dom/global-registrator": "^15.0.0",
     "@microsoft/api-extractor": "^7.47.0",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
