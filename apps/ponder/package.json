@@ -24,7 +24,7 @@
     "@eidolonkit/tsconfig": "*",
     "@types/node": "^20.9.0",
     "eslint": "^8.53.0",
-    "eslint-config-ponder": "^0.4.37"
+    "eslint-config-ponder": "^0.6.0"
   },
   "trustedDependencies": [
     "better-sqlite3"
